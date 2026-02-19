@@ -1,65 +1,65 @@
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { User, LayoutGrid, Download } from "lucide-react";
 
 export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    return (
+        <section className="w-full bg-brand-light hero-slant py-16 md:py-32 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                {/* Left column: text with monospace font and bold */}
+                <div className="flex flex-col items-center text-secondary-dark text-center order-2 md:order-1 lg:order-1">
+                    <h1 className="text-header font-bold leading-tight">
+                        Hello! <br />
+                        I am Tomasz
+                    </h1>
+                    <p className="italic text-body mt-4 max-w-md mx-auto">
+                        <span className="font-bold">Software Developer</span> specializing in <span className="font-bold">C#</span> and <span className="font-bold">.NET</span>, focused on building scalable business applications and modern web solutions.
+                        Currently pursuing a degree in <span className="font-bold">Software Engineering</span>.
+                    </p>
+
+                    {/* Call-to-action buttons */}
+                    <div className="mt-10 flex flex-wrap justify-center gap-4">
+                        <Link href="/about"
+                            className="flex items-center gap-2 px-6 py-3 bg-white text-secondary-dark font-bold rounded-lg hover:bg-secondary-dark hover:text-text-light transition-all shadow-md">
+                            <User size={20} />
+                            About Me
+                        </Link>
+
+                        <Link href="/projects"
+                            className="flex items-center gap-2 px-6 py-3 bg-white text-secondary-dark font-bold rounded-lg hover:bg-secondary-dark hover:text-text-light transition-all shadow-md">
+                            <LayoutGrid size={20} />
+                            My Projects
+                        </Link>
+
+                        <Link href="/cv-tomasz.pdf"
+                            download
+                            className="flex items-center gap-2 px-6 py-3 bg-white text-secondary-dark font-bold rounded-lg hover:bg-secondary-dark hover:text-text-light transition-all shadow-md">
+                            <Download size={20} />
+                            Download CV
+                        </Link>
+                    </div>
+                </div>
+
+                {/* Right column: circular profile photo with radial background and border */}
+                <div className="relative flex justify-center order-1 md:order-2">
+                    
+                    {/* Radial background behind the profile photo */}
+                    <div className="absolute w-56 h-56 md:w-72 md:h-72 lg:w-[450px] lg:h-[450px] bg-radial rounded-full" />
+                    <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-[400px] lg:h-[400px] border-4 border-secondary-dark rounded-full overflow-hidden z-10">
+                        <Image
+                            src="/images/ProfilePhoto.jpg"
+                            alt="It's me!"
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px"
+                            priority
+                            className="object-contain relative z-10"
+                        />
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    );
 }
