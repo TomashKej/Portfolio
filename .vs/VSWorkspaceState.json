@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.next\\dev",
-    "\\app",
-    "\\public\\projectsResources",
-    "\\public\\projectsResources\\2dRpgGame"
+    "\\app"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\next.config.ts",
   "PreviewInSolutionExplorer": false
 }
