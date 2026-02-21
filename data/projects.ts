@@ -44,7 +44,7 @@ export const projects: Project[] = [
         description:
             "A web interface for managing tasks and workflows, built with React and React-Bootstrap. Focused on responsive design, interactive UI components, and reusable React hooks, demonstrating clean component architecture, state management, and polished visual design.",
         tech: ["React", "TypeScript", "HTML", "CSS", "React-Bootstrap"],
-        github: "https://github.com/TwojNick/portfolio",
+        github: "https://github.com/TomashKej/WorkManagerAPP",
         images: [
             "/projectsResources/WmInterface/WmMainPage.png",
             "/projectsResources/WmInterface/WmMenuPhone.png",

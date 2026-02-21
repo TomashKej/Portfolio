@@ -37,7 +37,7 @@ body {
         inset: 0;
         background-image: linear-gradient(rgba(194,194,194,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(194,194,194,0.03) 1px, transparent 1px);
         background-size: 40px 40px;
-        mask-image: radial-gradient(circle, rgba(0,0,0,0.8), transparent 85%);
+        mask-image: radial-gradient(circle, rgba(0,0,0,0.8), transparent 90%);
         pointer-events: none;
         z-index: -1;
     }
