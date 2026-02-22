@@ -33,7 +33,7 @@ export default function Home() {
                             My Projects
                         </Link>
 
-                        <Link href="/cv-tomasz.pdf"
+                        <Link href="/cv/TomaszKaczmarekSoftwareDeveloperCvInPDF.pdf"
                             download
                             className="flex items-center gap-2 px-6 py-3 bg-white text-secondary-dark font-bold rounded-lg hover:bg-secondary-dark hover:text-text-light transition-all shadow-md">
                             <Download size={20} />

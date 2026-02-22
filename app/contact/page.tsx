@@ -45,7 +45,7 @@ export default function ContactPage() {
                                 </Accordion.Trigger>
                             </Accordion.Header>
                             <Accordion.Content className="mt-4 space-y-3 animate-in fade-in slide-in-from-top-2">
-                                <CopyField value="tk.developer@gmail.com" label="Email" icon={<Mail size={16} />} />
+                                <CopyField value="tomasz.m.kaczmarek@gmail.com" label="Email" icon={<Mail size={16} />} />
                                 <CopyField value="+44 7535 623284" label="Phone" icon={<Phone size={16} />} />
                             </Accordion.Content>
                         </Accordion.Item>

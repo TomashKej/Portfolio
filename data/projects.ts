@@ -12,7 +12,7 @@ export const projects: Project[] = [
         description:
             "Desktop application with layered architecture, authentication, employee and inventory management built in C# WPF using MVVM and Entity Framework.",
         tech: ["C#", "WPF", "MVVM", "Entity Framework", "SQL Server"],
-        github: "https://github.com/TomashKej/Project-BizCon",
+        github: "https://github.com/TomashKej/BizCon_WPF",
         images: [
             "/projectsResources/BizCon/BizConLogin.png",
             "/projectsResources/BizCon/BizConBusinessView.png",
@@ -28,7 +28,7 @@ export const projects: Project[] = [
         description:
             "Employee portal web application with user authentication, employee/client and orders management, and some other features built in PHP with a SQL database.",
         tech: ["PHP", "HTML", "CSS", "SQL Server", "JavaScript"],
-        github: "https://github.com/TomashKej/Java_RPG_Game",
+        github: "https://github.com/TomashKej/ZarMagEmployeePortal",
         images: [
             "/projectsResources/ZarMag/ZarMagLogin.png",
             "/projectsResources/ZarMag/ZarMagProfile.png",
@@ -76,7 +76,7 @@ export const projects: Project[] = [
         description:
             "Hands-on network setup using Cisco Packet Tracer , demonstrating static and dynamic IP addressing, VLAN configuration, router and switch setup, inter-VLAN routing, and basic PC networking. The project includes creating a functional LAN with multiple subnets, DHCP configuration, and connectivity verification between hosts, switches, and routers.",
         tech: ["Cisco Packet Tracer", "Router Configuration", "Switch VLANs", "Static & Dynamic IP", "DHCP", "Networking Fundamentals"],
-        github: "https://github.com/TwojNick/cisco-network-project",
+        github: "",
         images: [
             "/projectsResources/Cisco/CiscoExample1.png",
             "/projectsResources/Cisco/CiscoExample2.png",

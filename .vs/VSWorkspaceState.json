@@ -1,8 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\app"
+    "\\app",
+    "\\app\\about",
+    "\\app\\actions",
+    "\\app\\components",
+    "\\app\\hooks",
+    "\\app\\projects",
+    "\\data",
+    "\\public",
+    "\\public\\cv"
   ],
-  "SelectedNode": "\\next.config.ts",
+  "SelectedNode": "\\app\\actions\\sendEmail.ts",
   "PreviewInSolutionExplorer": false
 }

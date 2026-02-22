@@ -38,9 +38,10 @@ export default function ProjectsPage()
                     More projects, and documentation are available on GitHub.
                 </p>
                 <a
-                    href="https://github.com/TwojNick"
+                    href="https://github.com/TomashKej"
                     target="_blank"
-                    className="inline-block mt-6 px-6 py-3 bg-white text-secondary-dark font-bold rounded-lg hover:scale-105 transition-all relative z-10"
+                    rel="noopener noreferrer"
+                    className="inline-flex mt-6 px-6 py-3 bg-white text-secondary-dark font-bold rounded-lg hover:scale-105 transition-all relative z-10"
                 >
                     Visit GitHub Profile
                 </a>
