@@ -34,7 +34,7 @@ export default function Navbar()
 
                 {/* Mobile Menu Overlay */}
                 {isMenuOpen && ( 
-                    <div className="absolute top-full left-0 w-full bg-secondary-dark flex flex-col items-center gap-6 py-8 border-t border-gray-800 md:hidden shadow-xl">
+                    <div className="absolute top-full left-0 w-full bg-secondary-dark flex flex-col items-center gap-6 py-8 border-top-bottom md:hidden shadow-xl">
                         <Link href="/about" className="nav-link text-2xl" onClick={() => setIsMenuOpen(false)}>About</Link>
                         <Link href="/projects" className="nav-link text-2xl" onClick={() => setIsMenuOpen(false)}>Projects</Link>
                         <Link href="/contact" className="nav-link text-2xl" onClick={() => setIsMenuOpen(false)}>Contact</Link>

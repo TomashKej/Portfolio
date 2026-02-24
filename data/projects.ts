@@ -40,6 +40,18 @@ export const projects: Project[] = [
     },
 
     {
+        title: "Virtual University",
+        description:
+            `A real-time virtual university platform built on a client-server architecture supporting user authentication, token-based access control, and multi-user interactions.
+            The system includes REST API integration and secure session management. Project covered by a non- disclosure agreement.`,
+        tech: ["C#", ".NET", "REST API", "Client-Server Architecture", "Authentication", "Swagger", "Agile"],
+        github: "",
+        images: [
+            "/projectsResources/VirtualUniversity/VuPlaceholder.jpg"
+        ]
+    },
+
+    {
         title: "Work Manager App Interface",
         description:
             "A web interface for managing tasks and workflows, built with React and React-Bootstrap. Focused on responsive design, interactive UI components, and reusable React hooks, demonstrating clean component architecture, state management, and polished visual design.",
@@ -72,9 +84,24 @@ export const projects: Project[] = [
     },
 
     {
+        title: "Projectile Motion Simulation",
+        description:
+            `A browser-based physics simulation demonstrating projectile motion. Users can adjust launch parameters and visualise the resulting trajectory in real time. 
+            The project was implemented as part of a physics course to reinforce understanding of motion kinematics and basic simulation techniques.`,
+        tech: ["HTML", "JavaScript", "CSS"],
+        github: "https://github.com/TomashKej/Projectile-motion-simulation",
+        images: [
+            "/projectsResources/ProjectileMotionSimulation/SimulationTab.png",
+            "/projectsResources/ProjectileMotionSimulation/TheoryAndFormulasTab.png"
+        ]
+
+    },
+
+    {
         title: "Cisco Projects",
         description:
-            "Hands-on network setup using Cisco Packet Tracer , demonstrating static and dynamic IP addressing, VLAN configuration, router and switch setup, inter-VLAN routing, and basic PC networking. The project includes creating a functional LAN with multiple subnets, DHCP configuration, and connectivity verification between hosts, switches, and routers.",
+            `Hands-on network setup using Cisco Packet Tracer , demonstrating static and dynamic IP addressing, VLAN configuration, router and switch setup, inter-VLAN routing, and basic PC networking. 
+            The project includes creating a functional LAN with multiple subnets, DHCP configuration, and connectivity verification between hosts, switches, and routers.`,
         tech: ["Cisco Packet Tracer", "Router Configuration", "Switch VLANs", "Static & Dynamic IP", "DHCP", "Networking Fundamentals"],
         github: "",
         images: [

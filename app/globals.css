@@ -111,6 +111,11 @@ body {
             text-shadow: 0 0 8px rgba(194,194,194,0.4);
         }
 
+    /* Custom border utilities */
+    .border-top-bottom {
+        @apply border-t border-b border-gray-800;
+    }
+
     /* Shimmer animation */
     @keyframes shimmer {
         from {
