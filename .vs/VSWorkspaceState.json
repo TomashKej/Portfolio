@@ -2,14 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\about",
-    "\\app\\actions",
     "\\app\\components",
-    "\\app\\hooks",
-    "\\app\\projects",
-    "\\data",
+    "\\app\\contact",
     "\\public",
-    "\\public\\cv"
+    "\\public\\cv",
+    "\\public\\projectsResources",
+    "\\public\\projectsResources\\PrestivaCarsMVC",
+    "\\public\\projectsResources\\ProjectileMotionSimulation",
+    "\\public\\projectsResources\\VirtualUniversity"
   ],
+  "SelectedNode": "\\public\\projectsResources\\PrestivaCarsMobile",
   "PreviewInSolutionExplorer": false
 }

@@ -1,3 +1,10 @@
+/**
+ * Home page of the portfolio website, featuring a hero section with a profile photo and introduction.
+ * The layout is responsive, with the profile photo and text side by side on larger screens and stacked on smaller devices.
+ * The hero section includes a radial background behind the profile photo, and call-to-action buttons for navigating to the about page, projects page, and downloading the CV.
+ * The profile photo is styled with a border and is contained within a circular frame, while the text uses a monospace font and bold styling for emphasis.
+ */
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -33,7 +40,7 @@ export default function Home() {
                             My Projects
                         </Link>
 
-                        <Link href="/cv/TomaszKaczmarekSoftwareDeveloperCvInPDF.pdf"
+                        <Link href="/cv/TomaszKaczmarekSoftwareDeveloperCv.pdf"
                             download
                             className="flex items-center gap-2 px-6 py-3 bg-white text-secondary-dark font-bold rounded-lg hover:bg-secondary-dark hover:text-text-light transition-all shadow-md">
                             <Download size={20} />

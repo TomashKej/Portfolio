@@ -1,3 +1,9 @@
+/** 
+ * About Page
+ * This page provides information about the developer, their skills, and experience.
+ * It includes sections on engineering and architecture, computer networks, technical foundations, current learning focus, and contact information.
+ */
+
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -41,24 +47,29 @@ export default function AboutPage() {
                     {/* INTRO */}
                     <section className="space-y-4">
                         <p className="text-xl text-white font-medium leading-relaxed">
-                            I am a Junior Software Developer and a Software Engineering student who genuinely enjoys building reliable,
-                            well structured software. I specialise in backend development with C# and .NET,
-                            while also working confidently across modern web technologies.
+                            I am a Software Developer and Software Engineering student specialising in backend development with C# and .NET,
+                            focused on building reliable, well-structured systems.
                         </p>
 
                         <p>
                             My strongest expertise lies in <span className="text-white font-semibold">
-                                C# and the .NET ecosystem (ASP.NET Core, WPF, MVVM)
-                            </span>. I design backend systems, REST APIs, and structured business logic
-                            with a strong focus on clarity, maintainability, and scalability.
+                                C# and the .NET ecosystem (ASP.NET Core, MVC, WPF, MVVM)
+                            </span>. I design backend systems, REST APIs, and business logic with a strong focus on clarity,
+                            maintainability, and scalability.
                         </p>
 
                         <p>
-                            Alongside .NET, I develop web applications using <span className="text-white font-semibold"> 
-                                PHP, React, Next.js, JavaScript, TypeScript, HTML, CSS and Tailwind
+                            Alongside .NET, I develop web applications using <span className="text-white font-semibold">
+                                PHP (including Laravel), React, Next.js, JavaScript and TypeScript
                             </span>, supported by solid knowledge of
                             <span className="text-white font-semibold"> SQL and relational databases</span>.
                             I am comfortable building full stack solutions from user interface to database modelling.
+                        </p>
+
+                        <p>
+                            I am currently expanding my skill set by learning
+                            <span className="text-white font-semibold"> CQRS patterns with MediatR, containerisation using Docker, and mobile application development with React Native</span>,
+                            building a deeper understanding of modern, scalable application design.
                         </p>
 
                         <p>
@@ -66,12 +77,12 @@ export default function AboutPage() {
                             Center for Research and Programming (CBiP), contributing to backend development
                             for a student platform. The application enables users to join servers, navigate interactive
                             environments, participate in meetings, and communicate within a collaborative digital space.
-                            I work with Git, GitHub, Jira and Swagger as part of an Agile team.
+                            <span className="text-white font-semibold">I work with Git, GitHub, Jira and Swagger as part of an Agile team.</span>
                         </p>
 
                         <p>
-                            What sets me apart is analytical thinking combined with practical engineering discipline.
-                            I do not just write code. I design systems that are structured, maintainable and scalable.
+                            What sets me apart is analytical thinking combined with a strong focus on software architecture and engineering discipline.<br />
+                            <span className="text-white font-semibold">I do not just write code. I design systems that are structured, maintainable and scalable.</span>
                         </p>
                     </section>
 
@@ -81,16 +92,19 @@ export default function AboutPage() {
                             <Layers className="text-brand-light" size={24} />
                             Engineering and Architecture
                         </h2>
-
                         <p>
-                            I understand client server architecture, layered design, and separation of concerns.
-                            I use UML diagrams to plan systems before implementation,
-                            ensuring clarity and structure from the beginning.
+                            I focus on building systems with clear structure and separation of concerns,
+                            applying principles such as layered architecture and clean design patterns.
                         </p>
 
                         <p>
-                            I am particularly interested in clean architecture, scalable backend systems,
-                            and writing code that remains understandable over time.
+                            I use UML diagrams and structured planning to design systems before implementation,
+                            helping me reduce complexity and create more predictable and maintainable solutions.
+                        </p>
+
+                        <p>
+                            I am particularly interested in scalable backend systems, clean architecture,
+                            and writing code that remains understandable and reliable over time.
                         </p>
                     </section>
 
@@ -121,18 +135,16 @@ export default function AboutPage() {
 
                         <p>
                             I explored electronics and circuit simulation using Multisim,
-                            strengthening my understanding of how software interacts with hardware systems.
+                            gaining a better understanding of how software interacts with hardware systems.
                         </p>
 
                         <p>
-                            I also worked extensively with Microsoft Project, where I independently designed
-                            a complete ERP system plan from scratch. This included scheduling,
-                            resource allocation, defining milestones, identifying critical paths,
-                            and visualising progress using Gantt charts.
+                            I also worked with Microsoft Project, where I designed a complete ERP system plan,
+                            including scheduling, resource allocation, and system structure visualisation.
                         </p>
 
                         <p>
-                            This experience improved my structured thinking and ability to approach complex systems
+                            This experience strengthened my structured thinking and ability to approach complex systems
                             in a methodical and organised way.
                         </p>
                     </section>
@@ -151,11 +163,11 @@ export default function AboutPage() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                             <LearningItem text="Advanced backend architecture in .NET" />
-                            <LearningItem text="Scalable system design patterns" />
-                            <LearningItem text="SQL optimisation and performance tuning" />
-                            <LearningItem text="Distributed systems fundamentals" />
-                            <LearningItem text="Modern React architecture" />
-                            <LearningItem text="Professional software engineering practices" />
+                            <LearningItem text="CQRS and MediatR in real applications" />
+                            <LearningItem text="Building web applications with Laravel (PHP)" />
+                            <LearningItem text="Mobile app development with React Native" />
+                            <LearningItem text="Containerisation with Docker" />
+                            <LearningItem text="Scalable and maintainable system design" />
                         </div>
                     </section>
 
@@ -177,25 +189,25 @@ export default function AboutPage() {
                         <SkillGroup
                             icon={<Globe size={18} />}
                             title="Web and Backend"
-                            skills="ASP.NET / .NET, REST APIs, React, Next.js, HTML, CSS, Tailwind"
+                            skills="ASP.NET Core, .NET, MVC, REST APIs, PHP, Laravel, React, Next.js, HTML, CSS, Tailwind"
                         />
 
                         <SkillGroup
                             icon={<Database size={18} />}
                             title="Databases"
-                            skills="SQL Server, relational databases, query optimisation"
-                        />
-
-                        <SkillGroup
-                            icon={<Terminal size={18} />}
-                            title="Systems and Networking"
-                            skills="Client Server Architecture, IPv4, IPv6, DNS, DHCP, Subnetting, Cisco Packet Tracer"
+                            skills="SQL Server, relational databases, database design, query optimisation"
                         />
 
                         <SkillGroup
                             icon={<Layers size={18} />}
-                            title="Software Engineering"
-                            skills="Object-Oriented Programming (OOP), UML, System Design, Clean Architecture, Agile, Scrum"
+                            title="Architecture and Engineering"
+                            skills="OOP, MVVM, MVC, CQRS, MediatR, UML, System Design, Clean Architecture, Agile, Scrum"
+                        />
+
+                        <SkillGroup
+                            icon={<Terminal size={18} />}
+                            title="Systems and Infrastructure"
+                            skills="Client-server architecture, Docker, IPv4, IPv6, DNS, DHCP, subnetting, Cisco Packet Tracer"
                         />
 
                         <SkillGroup
@@ -242,7 +254,7 @@ export default function AboutPage() {
 
                     {/* CV */}
                     <Link
-                        href="/cv/TomaszKaczmarekSoftwareDeveloperCvInPDF.pdf"
+                        href="/cv/TomaszKaczmarekSoftwareDeveloperCv.pdf"
                         download
                         className="justify-center gap-3 w-full py-4 font-bold rounded-xl glass-card overflow-hidden nav-link">
 

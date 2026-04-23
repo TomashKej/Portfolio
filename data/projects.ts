@@ -52,6 +52,31 @@ export const projects: Project[] = [
     },
 
     {
+        title: "PrestivaCars – Dealership Management System",
+        description:
+            "A modern ASP.NET Core MVC application for managing a car dealership, built with a public-facing website, a separate intranet panel, and a dedicated data layer using Entity Framework Core.",
+        tech: ["C#", "ASP.NET Core MVC", "Razor Views", "Entity Framework Core", "Code First"],
+        github: "https://github.com/TomashKej/PrestivaCars-ASP.NET-Core-MVC",
+        images: [
+            "/projectsResources/PrestivaCarsMVC/VehiclePage.png",
+            "/projectsResources/PrestivaCarsMVC/AddVehiclePage.png",
+            "/projectsResources/PrestivaCarsMVC/VehicleDetailsPage.png"
+        ]
+    },
+
+    {
+        title: "PrestivaCars – Mobile Business Application",
+        description:
+            "A mobile business application built with React Native and TypeScript, designed as a full-stack project with a .NET Web API backend, CQRS architecture, and planned MediatR and Docker integration.",
+        tech: ["React Native", "TypeScript", "React Navigation", ".NET Web API", "CQRS", "MediatR", "Docker"],
+        github: "https://github.com/TomashKej/PrestivaCars",
+        images: [
+            "/projectsResources/PrestivaCarsMobile/LandingPage.png",
+            "/projectsResources/PrestivaCarsMobile/MainPage.png",
+        ]
+    },
+
+    {
         title: "Work Manager App Interface",
         description:
             "A web interface for managing tasks and workflows, built with React and React-Bootstrap. Focused on responsive design, interactive UI components, and reusable React hooks, demonstrating clean component architecture, state management, and polished visual design.",

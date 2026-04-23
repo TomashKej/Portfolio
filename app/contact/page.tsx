@@ -1,3 +1,9 @@
+/**
+ * Contact Page
+ * This page provides various ways to connect with the developer, including social media links, direct contact information, and a contact form.
+ * Users can copy email and phone details, or send a message directly through the form.
+ */
+
 'use client';
 
 import * as Accordion from "@radix-ui/react-accordion";

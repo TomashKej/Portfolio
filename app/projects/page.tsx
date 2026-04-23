@@ -1,3 +1,9 @@
+/**
+ * Projects Page
+ * This page showcases a selection of private and engineering projects, demonstrating backend architecture, web development, and computer science fundamentals.
+ * Some projects are available on GitHub, while others are private due to confidentiality agreements. Detailed discussions about any project can be arranged during an interview.
+ */
+
 import { Metadata } from "next";
 import { projects } from "@/data/projects";
 import ProjectsCard from "@/app/components/ProjectsCard";
@@ -12,8 +18,10 @@ export default function ProjectsPage()
         <div className="w-full max-w-6xl px-4 sm:px-6 py-12 md:py-20">
             {/* --- Header element --- */}
             <header className="mb-6">
-                <h1 className="text-header font-bold text-gradient">Projects</h1>
-                <div className="h-1.5 w-24 bg-color-brand-light rounded-full"/>
+                <h1 className="text-header font-bold text-gradient">
+                    Projects<span className="text-brand-light">.</span>
+                </h1>
+                <div className="h-1.5 w-24 bg-brand-light rounded-full" />
                 <p className="text-color-text-light/70 mt-4 max-w-6xl">
                     A selection of private / engineering projects demonstrating backend architecture, web development, and computer science fundamentals.
                     Some projects are available on GitHub, and some are private due to confidentiality agreements, but I am happy to discuss any of them in detail during an interview.
@@ -28,7 +36,6 @@ export default function ProjectsPage()
 
             {/* GitHub CTA */}
             <section className="glass-card gradient-border p-10 mt-20 relative overflow-hidden text-center">
-                {/* Shimmer tylko w tle */}
                 <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
 
                 <h2 className="text-2xl font-bold text-gradient relative z-10">
