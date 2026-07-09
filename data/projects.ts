@@ -7,11 +7,63 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+
+    {
+        title: "PrestivaCars – Mobile Business Application",
+        description:
+            "A mobile business application built with React Native and TypeScript, designed as a full-stack project with a .NET Web API backend, CQRS architecture, and planned MediatR and Docker integration.",
+        tech: ["React Native", "TypeScript", "CQRS", ".NET Web API", "React Navigation", "MediatR", "Docker", "Mapster", "Android Studio"],
+        github: "https://github.com/TomashKej/PrestivaCars",
+        images: [
+            "/projectsResources/PrestivaCarsMobile/LandingPage.png",
+            "/projectsResources/PrestivaCarsMobile/MainPage.png",
+            "/projectsResources/PrestivaCarsMobile/TotalExample.png",
+            "/projectsResources/PrestivaCarsMobile/Listings.png",
+            "/projectsResources/PrestivaCarsMobile/Filtering.png",
+            "/projectsResources/PrestivaCarsMobile/CarBrowsing.png",
+            "/projectsResources/PrestivaCarsMobile/AddVehiclePage.png"
+        ]
+    },
+
+    {
+        title: "PrestivaCars – Dealership Management System",
+        description:
+            "A modern ASP.NET Core MVC application for managing a car dealership, built with a public-facing website, a separate intranet panel, and a dedicated data layer using Entity Framework Core.",
+        tech: ["C#", "ASP.NET Core", "MVC", "Controllers", "Razor Views", "Entity Framework Core", "Code First", "SQL Server"],
+        github: "https://github.com/TomashKej/PrestivaCars-ASP.NET-Core-MVC",
+        images: [
+            "/projectsResources/PrestivaCarsMVC/WebMainPage.png",
+            "/projectsResources/PrestivaCarsMVC/WebMainPageBottom.png",
+            "/projectsResources/PrestivaCarsMVC/CarDetailsPage.png",
+            "/projectsResources/PrestivaCarsMVC/BrowseAllCarsPage.png",
+            "/projectsResources/PrestivaCarsMVC/BrowseNoOffersExample.png",
+            "/projectsResources/PrestivaCarsMVC/FAQPage.png",
+            "/projectsResources/PrestivaCarsMVC/VehicleOfferDetailsPage.png",
+            "/projectsResources/PrestivaCarsMVC/VehicleOffersPage.png",
+            "/projectsResources/PrestivaCarsMVC/VehiclePage.png",
+            "/projectsResources/PrestivaCarsMVC/AddVehiclePage.png",
+            "/projectsResources/PrestivaCarsMVC/BannerDetailsPage.png",
+            "/projectsResources/PrestivaCarsMVC/CMSPages.png"
+        ]
+    },
+
+    {
+        title: "Virtual University",
+        description:
+            `A real-time virtual university platform built on a client-server architecture supporting user authentication, token-based access control, and multi-user interactions.
+            The system includes REST API integration and secure session management. Project covered by a non- disclosure agreement.`,
+        tech: ["C#", ".NET", "REST API", "CQRS", "Client-Server Architecture", "Authentication", "Swagger", "Agile"],
+        github: "",
+        images: [
+            "/projectsResources/VirtualUniversity/VuPlaceholder.jpg"
+        ]
+    },
+
     {
         title: "BizCon Warehouse Management System",
         description:
             "Desktop application with layered architecture, authentication, employee and inventory management built in C# WPF using MVVM and Entity Framework.",
-        tech: ["C#", "WPF", "MVVM", "Entity Framework", "SQL Server"],
+        tech: ["C#", "WPF", "MVVM", "Entity Framework", "SQL Server", "Desktop App"],
         github: "https://github.com/TomashKej/BizCon_WPF",
         images: [
             "/projectsResources/BizCon/BizConLogin.png",
@@ -20,6 +72,30 @@ export const projects: Project[] = [
             "/projectsResources/BizCon/BizConMainPage.png",
             "/projectsResources/BizCon/BizConSampleCode.png",
             "/projectsResources/BizCon/BizConSampleTable.png"
+        ]
+    },
+
+    {
+        title: "Order Management System",
+        description:
+            "A Laravel-based business web application for managing service orders, clients, employees, positions, service categories and service items. Features include authentication, user administration, search, validation and complete CRUD workflows.",
+        tech: ["PHP", "Laravel", "Blade", "MVC", "Eloquent ORM", "Composer", "MySQL", "XAMP", "JavaScript", "HTML", "CSS", "Bootstrap"],
+        github: "https://github.com/TomashKej/Laravel-Project",
+        images: [
+            "/projectsResources/OrderManagerLaravel/UnauthorizedUserMainPage.png",
+            "/projectsResources/OrderManagerLaravel/LoginWindow.png",
+            "/projectsResources/OrderManagerLaravel/ResetPassword.png",
+            "/projectsResources/OrderManagerLaravel/MainPage.png",
+            "/projectsResources/OrderManagerLaravel/AllEmployees.png",
+            "/projectsResources/OrderManagerLaravel/EmployeeDetails.png",
+            "/projectsResources/OrderManagerLaravel/AllPositions.png",
+            "/projectsResources/OrderManagerLaravel/PositionDetails.png",
+            "/projectsResources/OrderManagerLaravel/ServiceItems.png",
+            "/projectsResources/OrderManagerLaravel/ServiceOrders.png",
+            "/projectsResources/OrderManagerLaravel/AddServiceOrder.png",
+            "/projectsResources/OrderManagerLaravel/AdminPanel.png",
+            "/projectsResources/OrderManagerLaravel/AddUser.png",
+            "/projectsResources/OrderManagerLaravel/EditUser.png"
         ]
     },
 
@@ -36,43 +112,6 @@ export const projects: Project[] = [
             "/projectsResources/ZarMag/ZarMagLoading.png",
             "/projectsResources/ZarMag/ZarMagAddOrder.png",
             "/projectsResources/ZarMag/ZarMagTable.png"
-        ]
-    },
-
-    {
-        title: "Virtual University",
-        description:
-            `A real-time virtual university platform built on a client-server architecture supporting user authentication, token-based access control, and multi-user interactions.
-            The system includes REST API integration and secure session management. Project covered by a non- disclosure agreement.`,
-        tech: ["C#", ".NET", "REST API", "Client-Server Architecture", "Authentication", "Swagger", "Agile"],
-        github: "",
-        images: [
-            "/projectsResources/VirtualUniversity/VuPlaceholder.jpg"
-        ]
-    },
-
-    {
-        title: "PrestivaCars – Dealership Management System",
-        description:
-            "A modern ASP.NET Core MVC application for managing a car dealership, built with a public-facing website, a separate intranet panel, and a dedicated data layer using Entity Framework Core.",
-        tech: ["C#", "ASP.NET Core MVC", "Razor Views", "Entity Framework Core", "Code First"],
-        github: "https://github.com/TomashKej/PrestivaCars-ASP.NET-Core-MVC",
-        images: [
-            "/projectsResources/PrestivaCarsMVC/VehiclePage.png",
-            "/projectsResources/PrestivaCarsMVC/AddVehiclePage.png",
-            "/projectsResources/PrestivaCarsMVC/VehicleDetailsPage.png"
-        ]
-    },
-
-    {
-        title: "PrestivaCars – Mobile Business Application",
-        description:
-            "A mobile business application built with React Native and TypeScript, designed as a full-stack project with a .NET Web API backend, CQRS architecture, and planned MediatR and Docker integration.",
-        tech: ["React Native", "TypeScript", "React Navigation", ".NET Web API", "CQRS", "MediatR", "Docker"],
-        github: "https://github.com/TomashKej/PrestivaCars",
-        images: [
-            "/projectsResources/PrestivaCarsMobile/LandingPage.png",
-            "/projectsResources/PrestivaCarsMobile/MainPage.png",
         ]
     },
 

@@ -188,14 +188,16 @@ export default function AboutPage() {
 
                         <SkillGroup
                             icon={<Globe size={18} />}
-                            title="Web and Backend"
-                            skills="ASP.NET Core, .NET, MVC, REST APIs, PHP, Laravel, React, Next.js, HTML, CSS, Tailwind"
+                            title="Web and Backend Development"
+                            skills="ASP.NET Core, .NET, REST APIs, Laravel, React, Next.js, HTML, CSS, Tailwind"
+
+
                         />
 
                         <SkillGroup
                             icon={<Database size={18} />}
                             title="Databases"
-                            skills="SQL Server, relational databases, database design, query optimisation"
+                            skills="SQL Server, MySQL, Entity Framework Core, Eloquent ORM, relational database design, query optimisation"
                         />
 
                         <SkillGroup
@@ -213,7 +215,7 @@ export default function AboutPage() {
                         <SkillGroup
                             icon={<Wrench size={18} />}
                             title="Tools"
-                            skills="Git, GitHub, Jira, Swagger, Microsoft Project"
+                            skills="Git, GitHub, Jira, Swagger, Microsoft Project, Composer, SSMS"
                         />
                     </div>
 

@@ -6,11 +6,9 @@
     "\\app\\contact",
     "\\public",
     "\\public\\cv",
-    "\\public\\projectsResources",
-    "\\public\\projectsResources\\PrestivaCarsMVC",
     "\\public\\projectsResources\\ProjectileMotionSimulation",
     "\\public\\projectsResources\\VirtualUniversity"
   ],
-  "SelectedNode": "\\public\\projectsResources\\PrestivaCarsMobile",
+  "SelectedNode": "\\public\\projectsResources",
   "PreviewInSolutionExplorer": false
 }
