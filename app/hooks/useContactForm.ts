@@ -3,14 +3,12 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import { sendEmail } from '@/app/actions/sendEmail';
 
-{/* --- interface for form state --- */ }
 interface FormState {
     name: string;
     email: string;
     message: string;
 }
 
-{/* --- interface for form errors --- */}
 interface Errors {
     name?: string;
     email?: string;
@@ -18,14 +16,16 @@ interface Errors {
     server?: string;
 }
 
-{/* --- custom hook for contact form-- - */}
+/**
+ * useContactForm centralizes validation, submission state, and input updates for the contact page.
+ */
 export const useContactForm = () => {
     const [formData, setFormData] = useState<FormState>({ name: "", email: "", message: "" });
     const [errors, setErrors] = useState<Errors>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
 
-    {/* --- The handleChange function updates form state on input change --- */}
+    // Validate required fields before sending the server action request.
     const validate = (): boolean => {
         const newErrors: Errors = {};
         if (!formData.name.trim()) newErrors.name = "Name is required.";
@@ -37,6 +37,7 @@ export const useContactForm = () => {
         return Object.keys(newErrors).length === 0;
     };
 
+    // Update form state and clear the field-specific error as the user edits.
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
@@ -45,7 +46,7 @@ export const useContactForm = () => {
         }
     };
 
-    {/* --- The handleSubmit function validates the form and simulates submission --- */ }
+    // Submit valid form data through the email server action and surface the result in UI state.
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
         if (!validate()) return;
@@ -64,4 +65,4 @@ export const useContactForm = () => {
     };
 
     return { formData, errors, isSubmitting, isSuccess, handleChange, handleSubmit };
-}
+};

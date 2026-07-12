@@ -9,6 +9,9 @@ type CopyFieldProps = {
     icon?: React.ReactNode;
 };
 
+/**
+ * CopyField displays contact text and gives quick copied-state feedback after clipboard interaction.
+ */
 export default function CopyField({ value, label, icon }: CopyFieldProps)
 {
     const { copy, copied } = useCopyToClipboard();

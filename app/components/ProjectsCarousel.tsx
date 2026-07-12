@@ -5,14 +5,23 @@ import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
 import { createPortal } from "react-dom";
 
+/**
+ * ProjectsCarousel handles screenshot browsing and a fullscreen preview modal.
+ */
 export function ProjectsCarousel({ images }: { images: string[] }) {
     const [index, setIndex] = useState(0);
     const [isExpanded, setIsExpanded] = useState(false);
 
-    {/* --- Block scroll when expanded --- */ }
+    // Preserve the previous body overflow so closing the modal restores the page state.
     useEffect(() => {
-        if (isExpanded) document.body.style.overflow = 'hidden';
-        else document.body.style.overflow = 'unset';
+        if (!isExpanded) return;
+
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+
+        return () => {
+            document.body.style.overflow = previousOverflow;
+        };
     }, [isExpanded]);
 
     if (!images.length) return null;
@@ -29,34 +38,42 @@ export function ProjectsCarousel({ images }: { images: string[] }) {
 
     return (
         <>
-            <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-black/40 border border-white/10 group">
+            <div className="group relative aspect-video w-full overflow-hidden rounded-xl border border-white/10 bg-black/40">
                 <Image
                     key={index}
                     src={images[index]}
                     alt={`Project screenshot ${index + 1}`}
                     fill
-                    className="object-contain p-2 transition-opacity duration-500 ease-in-out opacity-100"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    unoptimized
+                    loading="eager"
+                    className="object-contain p-2 opacity-100 transition-opacity duration-500 ease-in-out"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                 />
 
-                <div
-                    className="absolute top-2 right-2 p-1.5 bg-black/60 rounded-full cursor-pointer hover:scale-110 transition-all z-[50]"
+                <button
+                    type="button"
+                    aria-label="Open fullscreen screenshot"
+                    className="absolute right-2 top-2 z-[50] rounded-full bg-black/60 p-1.5 text-white transition-all hover:scale-110 hover:bg-black/80"
                     onClick={() => setIsExpanded(true)}
                 >
-                    <Maximize2 size={16} className="text-white" />
-                </div>
+                    <Maximize2 size={16} />
+                </button>
 
                 {images.length > 1 && (
                     <div className="absolute inset-0 flex items-center justify-between px-2 transition-opacity duration-200">
                         <button
-                            onClick={() => setIndex((index - 1 + images.length) % images.length)}
+                            type="button"
+                            aria-label="Show previous project screenshot"
+                            onClick={prevImage}
                             className="bg-black/60 hover:bg-black/80 text-white p-1.5 rounded-full backdrop-blur-sm transition-all"
                         >
                             <ChevronLeft size={16} />
                         </button>
 
                         <button
-                            onClick={() => setIndex((index + 1) % images.length)}
+                            type="button"
+                            aria-label="Show next project screenshot"
+                            onClick={nextImage}
                             className="bg-black/60 hover:bg-black/80 text-white p-1.5 rounded-full backdrop-blur-sm transition-all"
                         >
                             <ChevronRight size={16} />
@@ -75,6 +92,7 @@ export function ProjectsCarousel({ images }: { images: string[] }) {
                             src={images[index]}
                             alt="Fullscreen project screenshot"
                             fill
+                            unoptimized
                             className="object-contain"
                             priority
                         />
@@ -82,6 +100,8 @@ export function ProjectsCarousel({ images }: { images: string[] }) {
 
                     {/* Close button */}
                     <button
+                        type="button"
+                        aria-label="Close fullscreen screenshot"
                         className="absolute top-6 right-6 text-white/70 hover:text-white z-[110]"
                         onClick={() => setIsExpanded(false)}
                     >
@@ -92,12 +112,16 @@ export function ProjectsCarousel({ images }: { images: string[] }) {
                     {images.length > 1 && (
                         <>
                             <button
+                                type="button"
+                                aria-label="Show previous fullscreen screenshot"
                                 onClick={prevImage}
                                 className="absolute left-4 p-3 bg-white/5 hover:bg-white/10 rounded-full text-white z-[110]"
                             >
                                 <ChevronLeft size={40} />
                             </button>
                             <button
+                                type="button"
+                                aria-label="Show next fullscreen screenshot"
                                 onClick={nextImage}
                                 className="absolute right-4 p-3 bg-white/5 hover:bg-white/10 rounded-full text-white z-[110]"
                             >

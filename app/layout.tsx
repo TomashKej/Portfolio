@@ -1,42 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "TomaszDev",
-  description: "Tomasz Developer Portfolio",
+  title: "Tomasz.dev | Software Developer",
+  description: "Modern software developer portfolio focused on .NET, backend architecture, and full-stack business applications.",
 };
 
 /**
- * RootLayout component that wraps the entire application, providing global styles and layout structure.
- * @param param0
- * @returns
+ * RootLayout wraps every route with shared navigation, page flow, and footer.
  */
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable}`}>
-      <body className="min-h-screen flex flex-col">
+    <html lang="en">
+      <body className="min-h-screen flex flex-col text-text-light">
         <Navbar />
-            <main className="flex-grow flex items-center justify-center">
-              {children}
-            </main>
+        <main className="flex flex-1 flex-col">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

@@ -5,10 +5,8 @@
     "\\app\\components",
     "\\app\\contact",
     "\\public",
-    "\\public\\cv",
-    "\\public\\projectsResources\\ProjectileMotionSimulation",
-    "\\public\\projectsResources\\VirtualUniversity"
+    "\\public\\cv"
   ],
-  "SelectedNode": "\\public\\projectsResources",
+  "SelectedNode": "\\app\\components\\ProjectsCarousel.tsx",
   "PreviewInSolutionExplorer": false
 }

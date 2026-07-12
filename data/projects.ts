@@ -2,14 +2,14 @@ export interface Project {
     title: string;
     description: string;
     tech: string[];
-    github: string;
+    github?: string;
     images: string[];
 }
 
 export const projects: Project[] = [
 
     {
-        title: "PrestivaCars – Mobile Business Application",
+        title: "PrestivaCars - Mobile Business Application",
         description:
             "A mobile business application built with React Native and TypeScript, designed as a full-stack project with a .NET Web API backend, CQRS architecture, and planned MediatR and Docker integration.",
         tech: ["React Native", "TypeScript", "CQRS", ".NET Web API", "React Navigation", "MediatR", "Docker", "Mapster", "Android Studio"],
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     },
 
     {
-        title: "PrestivaCars – Dealership Management System",
+        title: "PrestivaCars - Dealership Management System",
         description:
             "A modern ASP.NET Core MVC application for managing a car dealership, built with a public-facing website, a separate intranet panel, and a dedicated data layer using Entity Framework Core.",
         tech: ["C#", "ASP.NET Core", "MVC", "Controllers", "Razor Views", "Entity Framework Core", "Code First", "SQL Server"],
@@ -53,7 +53,6 @@ export const projects: Project[] = [
             `A real-time virtual university platform built on a client-server architecture supporting user authentication, token-based access control, and multi-user interactions.
             The system includes REST API integration and secure session management. Project covered by a non- disclosure agreement.`,
         tech: ["C#", ".NET", "REST API", "CQRS", "Client-Server Architecture", "Authentication", "Swagger", "Agile"],
-        github: "",
         images: [
             "/projectsResources/VirtualUniversity/VuPlaceholder.jpg"
         ]
@@ -167,7 +166,6 @@ export const projects: Project[] = [
             `Hands-on network setup using Cisco Packet Tracer , demonstrating static and dynamic IP addressing, VLAN configuration, router and switch setup, inter-VLAN routing, and basic PC networking. 
             The project includes creating a functional LAN with multiple subnets, DHCP configuration, and connectivity verification between hosts, switches, and routers.`,
         tech: ["Cisco Packet Tracer", "Router Configuration", "Switch VLANs", "Static & Dynamic IP", "DHCP", "Networking Fundamentals"],
-        github: "",
         images: [
             "/projectsResources/Cisco/CiscoExample1.png",
             "/projectsResources/Cisco/CiscoExample2.png",
@@ -180,7 +178,6 @@ export const projects: Project[] = [
         description:
             "This section is under development. New projects, demos, and experiments will be added here soon. Stay tuned for updates as the portfolio grows.",
         tech: ["Web Development", "React", "C#", "PHP", "Networking", "More to Come"],
-        github: "",
         images: [
             "/projectsResources/placeholder/underconstruction.jpg"
         ]

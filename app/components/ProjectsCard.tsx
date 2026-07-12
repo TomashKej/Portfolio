@@ -2,17 +2,20 @@ import { Project } from "@/data/projects";
 import { ProjectsCarousel } from "./ProjectsCarousel";
 import { ChevronRight, Github, Lock } from "lucide-react";
 
+/**
+ * ProjectsCard presents one project with screenshots, stack tags, and source availability.
+ */
 export default function ProjectsCard({ project }: { project: Project }) {
   return (
-    <article className="glass-card gradient-border hover-card p-5 flex flex-col h-full">
+    <article className="glass-card gradient-border hover-card group flex h-full flex-col overflow-hidden p-4">
 
       <ProjectsCarousel images={project.images} />
-      <div className="flex flex-col flex-1 mt-4">
+      <div className="mt-5 flex flex-1 flex-col">
         <h3 className="text-lg font-bold text-white">
           {project.title}
         </h3>
 
-        <p className="text-sm text-color-brand-light/80 mt-2">
+        <p className="mt-2 text-sm text-brand-light">
           {project.description}
         </p>
 
@@ -20,7 +23,7 @@ export default function ProjectsCard({ project }: { project: Project }) {
           {project.tech.map(t => (
             <span
               key={t}
-              className="px-2 py-1 text-xs bg-white/5 rounded border border-white/10"
+              className="tech-chip"
             >
               {t}
             </span>
@@ -35,13 +38,13 @@ export default function ProjectsCard({ project }: { project: Project }) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-color-brand-light hover:underline transition-transform duration-200 hover:scale-105"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-cyan transition-transform duration-200 hover:translate-x-1 hover:text-white"
             >
               <Github size={16} />
               View Source <ChevronRight size={16} className="translate-y-[1px]"/>
             </a>
         ) : (
-            <div className="inline-flex items-center gap-1.5 text-sm font-medium text-[--color-text-light]/50 cursor-not-allowed select-none"
+            <div className="inline-flex cursor-not-allowed select-none items-center gap-1.5 text-sm font-medium text-text-light/50"
                  title="Source code is private due to confidentiality agreements or is not available on GitHub">
                  <Lock size={16} />
                  <span>Not Available</span>

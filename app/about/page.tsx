@@ -30,13 +30,14 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
     return (
-        <div className="w-full max-w-6xl px-4 sm:px-6 py-12 md:py-20">
+        <div className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 md:py-20">
 
             <header className="mb-12">
+                <p className="section-kicker mb-5">Backend, architecture, and product thinking</p>
                 <h1 className="text-header font-bold text-gradient">
                     About me<span className="text-brand-light">.</span>
                 </h1>
-                <div className="h-1.5 w-24 bg-brand-light rounded-full" />
+                <div className="h-1.5 w-24 rounded-full bg-gradient-to-r from-accent-cyan via-accent-emerald to-accent-amber" />
             </header>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14">
@@ -47,42 +48,44 @@ export default function AboutPage() {
                     {/* INTRO */}
                     <section className="space-y-4">
                         <p className="text-xl text-white font-medium leading-relaxed">
-                            I am a Software Developer and Software Engineering student specialising in backend development with C# and .NET,
-                            focused on building reliable, well-structured systems.
+                            I am a Software Developer and Software Engineering student who likes building software that has a clear purpose,
+                            a clean structure, and practical value for the people who use it.
                         </p>
 
                         <p>
-                            My strongest expertise lies in <span className="text-white font-semibold">
-                                C# and the .NET ecosystem (ASP.NET Core, MVC, WPF, MVVM)
-                            </span>. I design backend systems, REST APIs, and business logic with a strong focus on clarity,
-                            maintainability, and scalability.
+                            My strongest area is <span className="text-white font-semibold">
+                                C# and the .NET ecosystem
+                            </span>, especially backend logic, REST APIs, <span className="text-white font-semibold">CQRS</span>, ASP.NET Core, MVC, WPF and MVVM. I care about code that is readable,
+                            testable in practice, and easy for another developer to understand without guessing the intent.
                         </p>
 
                         <p>
-                            Alongside .NET, I develop web applications using <span className="text-white font-semibold">
-                                PHP (including Laravel), React, Next.js, JavaScript and TypeScript
-                            </span>, supported by solid knowledge of
-                            <span className="text-white font-semibold"> SQL and relational databases</span>.
-                            I am comfortable building full stack solutions from user interface to database modelling.
+                            I also build full-stack web projects with <span className="text-white font-semibold">
+                                React, Next.js, TypeScript, PHP and Laravel
+                            </span>, supported by SQL and relational database design. I enjoy connecting the pieces together:
+                            interface, API, business rules, persistence and deployment assumptions.
                         </p>
 
                         <p>
-                            I am currently expanding my skill set by learning
-                            <span className="text-white font-semibold"> CQRS patterns with MediatR, containerisation using Docker, and mobile application development with React Native</span>,
-                            building a deeper understanding of modern, scalable application design.
+                            At the moment I am strengthening my foundations in <span className="text-white font-semibold">
+                                C#, .NET, CQRS, MediatR, Mapster, Docker, React Native and API design
+                            </span>. I focus especially on backend work: well-structured endpoints, validation, token-based authentication,
+                            secure access control, clear request/response contracts and documentation. These areas form a solid technical base
+                            for my engineering work and the kind of applications I want to build professionally.
                         </p>
 
                         <p>
-                            I am currently gaining commercial experience as a C# Developer Intern at the
-                            Center for Research and Programming (CBiP), contributing to backend development
-                            for a student platform. The application enables users to join servers, navigate interactive
-                            environments, participate in meetings, and communicate within a collaborative digital space.
-                            <span className="text-white font-semibold">I work with Git, GitHub, Jira and Swagger as part of an Agile team.</span>
+                            I am gaining commercial experience as a <span className="text-white font-semibold">
+                                C# Developer Intern at the Center for Research and Programming (CBiP)
+                            </span>, where I contribute to backend work on a student platform. The product includes server joining,
+                            interactive environments, meetings and communication inside a shared digital space. In that work I use Git,
+                            GitHub, Jira and Swagger as part of an Agile team.
                         </p>
 
                         <p>
-                            What sets me apart is analytical thinking combined with a strong focus on software architecture and engineering discipline.<br />
-                            <span className="text-white font-semibold">I do not just write code. I design systems that are structured, maintainable and scalable.</span>
+                            What I bring is a mix of analytical thinking, patience with details, and a genuine interest in architecture.
+                            I am still growing as a developer, but I already know the kind of engineer I want to become:
+                            <span className="text-white font-semibold"> someone who writes useful code, asks good questions, and leaves systems easier to work with.</span>
                         </p>
                     </section>
 
@@ -139,6 +142,16 @@ export default function AboutPage() {
                         </p>
 
                         <p>
+                            I also worked with Tinkercad and Arduino basics, creating simple circuits and small hardware-oriented exercises.
+                            This helped me connect programming concepts with sensors, inputs, outputs, and the physical behaviour of a system.
+                        </p>
+
+                        <p>
+                            I have basic experience with assembler as well. It is not my main development area, but it gave me useful context
+                            about low-level execution, memory, registers, and how higher-level code eventually maps closer to the machine.
+                        </p>
+
+                        <p>
                             I also worked with Microsoft Project, where I designed a complete ERP system plan,
                             including scheduling, resource allocation, and system structure visualisation.
                         </p>
@@ -164,8 +177,8 @@ export default function AboutPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                             <LearningItem text="Advanced backend architecture in .NET" />
                             <LearningItem text="CQRS and MediatR in real applications" />
-                            <LearningItem text="Building web applications with Laravel (PHP)" />
-                            <LearningItem text="Mobile app development with React Native" />
+                            <LearningItem text="Improving web application development with Laravel (PHP)" />
+                            <LearningItem text="Improving mobile app development with React Native" />
                             <LearningItem text="Containerisation with Docker" />
                             <LearningItem text="Scalable and maintainable system design" />
                         </div>
@@ -183,13 +196,13 @@ export default function AboutPage() {
                         <SkillGroup
                             icon={<Code size={18} />}
                             title="Additional Languages"
-                            skills="C, C++, Java, Pascal"
+                            skills="C, C++, Java, Pascal, basic assembler"
                         />
 
                         <SkillGroup
                             icon={<Globe size={18} />}
                             title="Web and Backend Development"
-                            skills="ASP.NET Core, .NET, REST APIs, Laravel, React, Next.js, HTML, CSS, Tailwind"
+                            skills="ASP.NET Core, .NET, REST APIs, endpoint design, token-based authentication, Laravel, React, Next.js, HTML, CSS, Tailwind"
 
 
                         />
@@ -215,7 +228,7 @@ export default function AboutPage() {
                         <SkillGroup
                             icon={<Wrench size={18} />}
                             title="Tools"
-                            skills="Git, GitHub, Jira, Swagger, Microsoft Project, Composer, SSMS"
+                            skills="Git, GitHub, Jira, Swagger, Microsoft Project, Composer, SSMS, Tinkercad, Arduino"
                         />
                     </div>
 
@@ -246,7 +259,7 @@ export default function AboutPage() {
                     {/* CONTACT */}
                     <Link
                         href="/contact"
-                        className="justify-center gap-3 w-full py-4 font-bold rounded-xl glass-card overflow-hidden nav-link">
+                        className="action-card hover-card relative flex w-full items-center justify-center gap-3 overflow-hidden rounded-xl py-4 font-bold">
 
                         <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
@@ -258,7 +271,7 @@ export default function AboutPage() {
                     <Link
                         href="/cv/TomaszKaczmarekSoftwareDeveloperCv.pdf"
                         download
-                        className="justify-center gap-3 w-full py-4 font-bold rounded-xl glass-card overflow-hidden nav-link">
+                        className="action-card hover-card relative flex w-full items-center justify-center gap-3 overflow-hidden rounded-xl py-4 font-bold">
 
                         <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 

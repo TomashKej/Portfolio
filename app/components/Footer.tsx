@@ -7,23 +7,30 @@ const SOCIAL_LINKS = [
     { id: 4, href: "https://wa.me/447535623284", icon: MessageCircle, label: "WhatsApp" }
 ];
 
+/**
+ * Footer renders compact social navigation shared across the portfolio.
+ */
 export default function Footer() {
     return (
-        <footer className="w-full bg-secondary-dark py-6 mt-auto border-t border-gray-800">
-            <div className="flex justify-center items-center gap-8 md:gap-20">
-                {SOCIAL_LINKS.map((link) => { 
-                    const Icon = link.icon;
-                    return (
-                        <a key={link.id}
-                              href={link.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="nav-link"
-                              >
-                              <Icon size={40} className="md:w-10 md:h-10" />
-                        </a>  
-                    );
-                })}
+        <footer className="relative z-10 mt-auto w-full border-t border-white/10 bg-brand-dark py-5 sm:py-7">
+            <div className="flex w-full items-center justify-center px-4 sm:px-8 lg:px-12">
+                <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 md:gap-8">
+                    {SOCIAL_LINKS.map((link) => {
+                        const Icon = link.icon;
+                        return (
+                            <a
+                                key={link.id}
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={link.label}
+                                className="footer-link"
+                            >
+                                <Icon size={22} />
+                            </a>
+                        );
+                    })}
+                </div>
             </div>
         </footer>
     );
