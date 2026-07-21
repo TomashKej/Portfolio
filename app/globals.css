@@ -235,6 +235,12 @@ body::after {
         border-color: rgba(239, 68, 68, 0.35);
     }
 
+    /* Project cards keep their visual size while the browser skips off-screen rendering work. */
+    .project-card {
+        content-visibility: auto;
+        contain-intrinsic-size: 560px;
+    }
+
     /* Footer icons scale without glow so the footer stays quiet and uniform. */
     .footer-link {
         @apply inline-flex items-center rounded-lg border border-white/10 bg-white/5 p-2.5 text-text-light transition-all duration-200 ease-out hover:scale-110 hover:bg-white/10 hover:text-white;

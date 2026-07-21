@@ -1,12 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\app",
-    "\\app\\components",
-    "\\app\\contact",
     "\\public",
-    "\\public\\cv"
+    "\\public\\optimized",
+    "\\public\\optimized\\projectsResources",
+    "\\public\\optimized\\projectsResources\\PrestivaCarsMobile",
+    "\\public\\projectsResources",
+    "\\public\\projectsResources\\placeholder",
+    "\\public\\projectsResources\\PrestivaCarsMVC",
+    "\\public\\projectsResources\\VirtualUniversity",
+    "\\public\\projectsResources\\WmInterface"
   ],
-  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }

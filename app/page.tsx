@@ -50,7 +50,7 @@ const TECH_STACK_LOOP = [...TECH_STACK, ...TECH_STACK];
 export default function Home() {
     return (
         <section className="aurora-section relative isolate w-full overflow-hidden px-4 py-8 sm:px-6 md:py-14 xl:py-20">
-            <div className="mx-auto grid min-h-[calc(100svh-132px)] w-full max-w-7xl items-start gap-8 min-[769px]:grid-cols-[minmax(0,0.98fr)_minmax(340px,0.82fr)] md:gap-10 2xl:items-center 2xl:grid-cols-[1.02fr_0.98fr]">
+            <div className="mx-auto grid min-h-[calc(100svh-132px)] w-full max-w-7xl items-start gap-8 min-[769px]:grid-cols-[minmax(0,0.98fr)_minmax(340px,0.82fr)] min-[769px]:items-center md:gap-10 2xl:grid-cols-[1.02fr_0.98fr]">
                 <div className="order-2 flex min-w-0 flex-col items-start text-left min-[769px]:order-1">
                     <div className="section-kicker">
                         <Sparkles size={16} className="text-accent-cyan" />
@@ -67,7 +67,7 @@ export default function Home() {
                         and full-stack products that feel fast, structured, and polished.
                     </p>
 
-                    <div className="mt-7 flex w-full flex-col gap-3 sm:mt-9 sm:w-auto sm:flex-row">
+                    <div className="mt-7 flex w-full max-w-2xl flex-col justify-center gap-3 self-center sm:mt-9 sm:flex-row">
                         <Link href="/projects" className="primary-cta">
                             <LayoutGrid size={18} />
                             View Projects
@@ -109,7 +109,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="order-1 min-[769px]:order-2">
+                <div className="order-1 self-center min-[769px]:order-2">
                     <div className="mx-auto flex w-full max-w-[440px] flex-col gap-4 sm:max-w-[520px] lg:max-w-[500px] 2xl:max-w-[620px]">
                         <div className="profile-frame p-2.5 sm:p-3">
                             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.1rem] bg-brand-dark sm:rounded-[1.25rem]">

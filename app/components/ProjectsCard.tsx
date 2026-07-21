@@ -7,7 +7,7 @@ import { ChevronRight, Github, Lock } from "lucide-react";
  */
 export default function ProjectsCard({ project }: { project: Project }) {
   return (
-    <article className="glass-card gradient-border hover-card group flex h-full flex-col overflow-hidden p-4">
+    <article className="project-card glass-card gradient-border hover-card group flex h-full flex-col overflow-hidden p-4">
 
       <ProjectsCarousel images={project.images} />
       <div className="mt-5 flex flex-1 flex-col">

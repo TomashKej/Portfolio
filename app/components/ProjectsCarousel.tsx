@@ -6,6 +6,17 @@ import { X, ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
 import { createPortal } from "react-dom";
 
 /**
+ * getProjectPreviewImage maps an original project screenshot to its lightweight generated preview.
+ */
+function getProjectPreviewImage(image: string) {
+    if (!image.startsWith('/projectsResources/')) {
+        return image;
+    }
+
+    return `/optimized${image.replace(/\.[^/.]+$/, '.webp')}`;
+}
+
+/**
  * ProjectsCarousel handles screenshot browsing and a fullscreen preview modal.
  */
 export function ProjectsCarousel({ images }: { images: string[] }) {
@@ -41,11 +52,11 @@ export function ProjectsCarousel({ images }: { images: string[] }) {
             <div className="group relative aspect-video w-full overflow-hidden rounded-xl border border-white/10 bg-black/40">
                 <Image
                     key={index}
-                    src={images[index]}
+                    src={getProjectPreviewImage(images[index])}
                     alt={`Project screenshot ${index + 1}`}
                     fill
-                    unoptimized
-                    loading="eager"
+                    loading="lazy"
+                    decoding="async"
                     className="object-contain p-2 opacity-100 transition-opacity duration-500 ease-in-out"
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                 />
@@ -60,23 +71,39 @@ export function ProjectsCarousel({ images }: { images: string[] }) {
                 </button>
 
                 {images.length > 1 && (
-                    <div className="absolute inset-0 flex items-center justify-between px-2 transition-opacity duration-200">
+                    <div className="absolute inset-0 z-20 flex items-center justify-between px-3 pointer-events-none">
                         <button
                             type="button"
                             aria-label="Show previous project screenshot"
                             onClick={prevImage}
-                            className="bg-black/60 hover:bg-black/80 text-white p-1.5 rounded-full backdrop-blur-sm transition-all"
-                        >
-                            <ChevronLeft size={16} />
+                            className="pointer-events-auto
+                                       flex h-8 w-8 items-center justify-center
+                                       rounded-full
+                                       border border-white/30
+                                       bg-black/80
+                                       text-white
+                                       shadow-lg
+                                       transition-transform
+                                       hover:scale-110
+                                       hover:bg-black">
+                            <ChevronLeft size={24} />
                         </button>
 
                         <button
                             type="button"
                             aria-label="Show next project screenshot"
                             onClick={nextImage}
-                            className="bg-black/60 hover:bg-black/80 text-white p-1.5 rounded-full backdrop-blur-sm transition-all"
-                        >
-                            <ChevronRight size={16} />
+                            className="pointer-events-auto
+                                       flex h-8 w-8 items-center justify-center
+                                       rounded-full
+                                       border border-white/30
+                                       bg-black/80
+                                       text-white
+                                       shadow-lg
+                                       transition-transform
+                                       hover:scale-110
+                                       hover:bg-black">
+                            <ChevronRight size={24} />
                         </button>
                     </div>
                 )}
@@ -92,9 +119,10 @@ export function ProjectsCarousel({ images }: { images: string[] }) {
                             src={images[index]}
                             alt="Fullscreen project screenshot"
                             fill
-                            unoptimized
+                            loading="eager"
+                            quality={90}
                             className="object-contain"
-                            priority
+                            sizes="100vw"
                         />
                     </div>
 
@@ -115,17 +143,38 @@ export function ProjectsCarousel({ images }: { images: string[] }) {
                                 type="button"
                                 aria-label="Show previous fullscreen screenshot"
                                 onClick={prevImage}
-                                className="absolute left-4 p-3 bg-white/5 hover:bg-white/10 rounded-full text-white z-[110]"
-                            >
-                                <ChevronLeft size={40} />
+                                className="absolute left-2 sm:left-4 top-1/2 z-[120]
+                                           flex h-11 w-11 sm:h-14 sm:w-14
+                                           -translate-y-1/2
+                                           items-center justify-center
+                                           rounded-full
+                                           border border-white/30
+                                           bg-black/80
+                                           text-white
+                                           shadow-xl
+                                           transition-transform
+                                           hover:scale-110
+                                           hover:bg-black">
+                                <ChevronLeft className="h-7 w-7 sm:h-10 sm:w-10" />
                             </button>
+
                             <button
                                 type="button"
                                 aria-label="Show next fullscreen screenshot"
                                 onClick={nextImage}
-                                className="absolute right-4 p-3 bg-white/5 hover:bg-white/10 rounded-full text-white z-[110]"
-                            >
-                                <ChevronRight size={40} />
+                                className="absolute right-2 sm:right-4 top-1/2 z-[120]
+                                           flex h-11 w-11 sm:h-14 sm:w-14
+                                           -translate-y-1/2
+                                           items-center justify-center
+                                           rounded-full
+                                           border border-white/30
+                                           bg-black/80
+                                           text-white
+                                           shadow-xl
+                                           transition-transform
+                                           hover:scale-110
+                                           hover:bg-black">
+                                <ChevronRight className="h-7 w-7 sm:h-10 sm:w-10" />
                             </button>
                         </>
                     )}
